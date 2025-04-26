@@ -1,5 +1,6 @@
 // components/CountryCard.tsx
 import React from "react";
+import Image from "next/image";
 
 interface CountryCardProps {
   country: string;
@@ -18,7 +19,7 @@ const CountryCard: React.FC<CountryCardProps> = ({
     className="rounded-xl shadow-md overflow-hidden relative cursor-pointer"
     onClick={onClick}
   >
-    <img src={image} alt={country} className="w-full h-48 object-cover" />
+    <Image src={image} alt={country} className="w-full h-48 object-cover" />
     <button className="absolute top-3 left-3 bg-black bg-opacity-60 text-white px-3 py-1 text-sm rounded">
       Apply for {country} Visa
     </button>
